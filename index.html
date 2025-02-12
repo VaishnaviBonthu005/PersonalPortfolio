@@ -3,231 +3,361 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bonthu Vaishnavi - Resume</title>
+    <title>Bonthu Vaishnavi Portfolio</title>
     <style>
-        * {
+        /* General Styles */
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f7f7f7;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb, #a6c1ee, #f6d365);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
             color: #333;
-            padding-bottom: 50px;
-            line-height: 1.6;
+            overflow-x: hidden;
         }
 
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        /* Header */
         header {
-            background-color: #2c3e50;
-            color: #fff;
-            padding: 40px 0;
-            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            color: #333;
+            padding: 20px 0;
+            border-bottom: 3px solid #ff6f61;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
         }
 
         header h1 {
-            font-size: 36px;
+            text-align: center;
             margin: 0;
+            font-size: 36px;
+            color: #ff6f61;
+            animation: bounce 2s infinite, rainbow 5s infinite;
         }
 
-        header p {
-            font-size: 16px;
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-30px); }
+            60% { transform: translateY(-15px); }
+        }
+
+        @keyframes rainbow {
+            0% { color: #ff6f61; }
+            25% { color: #a6c1ee; }
+            50% { color: #f6d365; }
+            75% { color: #fbc2eb; }
+            100% { color: #ff6f61; }
+        }
+
+        /* Navigation */
+        nav {
+            text-align: center;
             margin-top: 10px;
         }
 
-        header a {
-            color: #ecf0f1;
+        nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ff6f61;
+            transform: scale(1.2);
+        }
+
+        /* Sections */
+        section {
+            padding: 40px 20px;
+            margin: 20px 0;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #ff6f61;
+            border-bottom: 2px solid #ff6f61;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 28px;
+            animation: slideInLeft 1s ease-in-out, colorChange 3s infinite;
+        }
+
+        @keyframes colorChange {
+            0% { color: #ff6f61; }
+            50% { color: #a6c1ee; }
+            100% { color: #ff6f61; }
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        ul li {
+            background: rgba(255, 111, 97, 0.1);
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 10px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        ul li:hover {
+            background: rgba(255, 111, 97, 0.2);
+            transform: scale(1.02);
+        }
+
+        a {
+            color: #ff6f61;
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
-        header a:hover {
-            color: #2980b9;
-        }
-
-        .container {
-            width: 80%;
-            margin: 40px auto;
-        }
-
-        section {
-            margin-bottom: 30px;
-        }
-
-        h2 {
-            color: #2980b9;
-            font-size: 28px;
-            border-bottom: 2px solid #2980b9;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-        }
-
-        .card {
-            background-color: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-
-        .card ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
-
-        .card ul li {
-            font-size: 16px;
-            margin-bottom: 10px;
-            line-height: 1.5;
-        }
-
-        .link {
-            color: #2980b9;
-            text-decoration: none;
-            transition: text-decoration 0.3s ease;
-        }
-
-        .link:hover {
+        a:hover {
+            color: #333;
             text-decoration: underline;
         }
 
-        .achievements {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
 
-        .badge {
-            background-color: #ecf0f1;
-            padding: 10px;
-            margin: 10px;
-            border-radius: 8px;
-            text-align: center;
-            width: 150px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        @keyframes slideInLeft {
+            from { transform: translateX(-100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
         }
 
-        .badge:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        @keyframes slideInRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
         }
 
-        .badge img {
-            width: 120px;
-            margin-bottom: 10px;
-        }
-
+        /* Footer */
         footer {
-            background-color: #2c3e50;
-            color: #fff;
+            background: rgba(255, 255, 255, 0.8);
+            color: #333;
             text-align: center;
             padding: 20px 0;
-            position: relative;
-            bottom: 0;
-            width: 100%;
+            margin-top: 40px;
+            border-top: 3px solid #ff6f61;
+            backdrop-filter: blur(10px);
         }
 
         footer p {
+            margin: 0;
             font-size: 16px;
         }
 
-        /* Responsive design */
-        @media (max-width: 768px) {
-            .container {
-                width: 90%;
-            }
+        /* Fun Elements */
+        .fun-element {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+            animation: float 3s ease-in-out infinite;
+        }
 
-            .achievements {
-                flex-direction: column;
-                align-items: center;
-            }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
 
-            .badge {
-                width: 100%;
-            }
+        /* Confetti Effect */
+        .confetti {
+            position: fixed;
+            top: -10px;
+            left: 50%;
+            width: 10px;
+            height: 10px;
+            background: #ff6f61;
+            animation: confetti-fall 5s linear infinite;
+        }
+
+        @keyframes confetti-fall {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(100vh) rotate(360deg); }
+        }
+
+        /* Interactive Buttons */
+        .fun-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #ff6f61;
+            color: white;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s ease, background 0.3s ease;
+        }
+
+        .fun-button:hover {
+            background: #a6c1ee;
+            transform: scale(1.1);
         }
     </style>
 </head>
 <body>
-
-<header>
-    <h1>Bonthu Vaishnavi</h1>
-    <p>Email: <a href="mailto:vaishuvaishnavibonthu@gmail.com" class="link">vaishuvaishnavibonthu@gmail.com</a> | LinkedIn: <a href="https://www.linkedin.com/in/vaishnavi-bonthu" class="link" target="_blank">LinkedIn Profile</a></p>
-</header>
-
-<div class="container">
-    <section id="summary">
-        <h2>Summary</h2>
-        <div class="card">
-            <p>Motivated and detail-oriented third-year Computer Science Engineering student at LBRCE College with a CGPA of 8.6. Proficient in programming languages such as Java, C++, and JavaScript, with a strong foundation in Data Structures & Algorithms. Eager to learn and apply new technologies to solve real-world challenges, with a focus on continuous improvement and analytical problem-solving.</p>
+    <header>
+        <div class="container">
+            <h1>Bonthu Vaishnavi</h1>
+            <nav>
+                <a href="#personal-info">Personal Info</a>
+                <a href="#summary">Summary</a>
+                <a href="#education">Education</a>
+                <a href="#skills">Skills</a>
+                <a href="#internships">Internships</a>
+                <a href="#achievements">Achievements</a>
+            </nav>
         </div>
-    </section>
+    </header>
 
-    <section id="education">
-        <h2>Education</h2>
-        <div class="card">
+    <div class="container">
+        <!-- Personal Information -->
+        <section id="personal-info">
+            <h2>Personal Information</h2>
             <ul>
-                <li><strong>2023-Present:</strong> B.Tech in Computer Science and Engineering - Lakireddy Bali Reddy College of Engineering, Mylavaram | CGPA: 8.6</li>
-                <li><strong>2020-2023:</strong> Diploma in Computer Science and Engineering - Kakinada Institute of Engineering and Technology for Women, Korangi | Overall Percentage: 87</li>
-                <li><strong>2019-2020:</strong> APSSC - ZPP Girls High School, Amalapuram | Percentage: 94.6</li>
+                <li><strong>Name:</strong> Bonthu Vaishnavi</li>
+                <li><strong>Email:</strong> <a href="mailto:vaishuvaishnavibonthu@gmail.com">vaishuvaishnavibonthu@gmail.com</a></li>
+                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/vaishnavi-bonthu" target="_blank">LinkedIn Profile</a></li>
             </ul>
-        </div>
-    </section>
+        </section>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="card">
+        <!-- Summary -->
+        <section id="summary">
+            <h2>Summary</h2>
+            <p>
+                Motivated and detail-oriented third-year Computer Science Engineering student at LBRCE College with a CGPA of 8.6.
+                Proficient in programming languages such as Java, C++, and JavaScript, with a strong foundation in Data Structures & Algorithms.
+                Eager to learn and apply new technologies to solve real-world challenges, with a focus on continuous improvement and analytical problem-solving.
+            </p>
+            <div class="fun-button" onclick="alert('Motivated and detail-oriented third-year Computer Science Engineering student at LBRCE College with a CGPA of 8.6. Proficient in programming languages such as Java, C++, and JavaScript, with a strong foundation in Data Structures & Algorithms. Eager to learn and apply new technologies to solve real-world challenges, with a focus on continuous improvement and analytical problem-solving.')">Click Me!</div>
+        </section>
+
+        <!-- Education -->
+        <section id="education">
+            <h2>Education</h2>
+            <ul>
+                <li>
+                    <strong>2023-Present:</strong> B.Tech in Computer Science and Engineering<br>
+                    Lakireddy Bali Reddy College of Engineering, Mylavaram<br>
+                    CGPA: 8.6
+                </li>
+                <li>
+                    <strong>2020-2023:</strong> Diploma in Computer Science and Engineering<br>
+                    Kakinada Institute of Engineering and Technology for Women, Korangi<br>
+                    Overall Percentage: 87
+                </li>
+                <li>
+                    <strong>2019-2020:</strong> APSSC<br>
+                    ZPP Girls High School, Amalapuram<br>
+                    Percentage: 94.6
+                </li>
+            </ul>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills">
+            <h2>Skills</h2>
             <ul>
                 <li><strong>Languages:</strong> Telugu (mother tongue), English (good spoken and written command)</li>
                 <li><strong>Programming Languages:</strong> C, C++, Java, HTML, CSS, JavaScript</li>
                 <li><strong>Operating Systems:</strong> Windows, Ubuntu</li>
-                <li><strong>Soft Skills:</strong> Adaptability (quickly learning new technologies), Time Management (balancing academics and projects), Communication (articulate and clear)</li>
+                <li><strong>Soft Skills:</strong> Adaptability, Time Management, Communication</li>
             </ul>
-        </div>
-    </section>
+        </section>
 
-    <section id="internships">
-        <h2>Internships and Workshops</h2>
-        <div class="card">
+        <!-- Internships and Workshops -->
+         <!-- Internships and Workshops -->
+<section id="internships">
+    <h2>Internships and Workshops</h2>
+    <ul>
+        <li>
+            <strong>Internship on AIML through APSSDC (May 2024 - June 2024):</strong><br>
+            <a href="https://www.linkedin.com/posts/vaishnavi-bonthu_i-am-pleased-to-share-my-experience-from-activity-7287701375558283264-yc69?utm_source=share&utm_medium=member_desktop" target="_blank">LinkedIn Post</a>
+        </li>
+        <li>
+            <strong>Internship on MERN Stack Technologies through Biztron Softech (June 2024 - July 2024):</strong><br>
+            <a href="https://www.linkedin.com/posts/vaishnavi-bonthu_i-am-excited-to-share-my-internship-experience-activity-7287696193197854720-1hq3?utm_source=share&utm_medium=member_desktop" target="_blank">LinkedIn Post</a>
+        </li>
+        <li>
+            <strong>Workshop on Python through Brainovision (1 week):</strong><br>
+            <a href="https://www.linkedin.com/posts/vaishnavi-bonthu_activity-7293867684901851136-v3t0?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD7DfB8BwDtfucFjbCqG86a2eSwqAurNVWE" target="_blank">LinkedIn Post</a>
+        </li>
+    </ul>
+</section>
+
+        <!-- Achievements -->
+        <section id="achievements">
+            <h2>Achievements</h2>
             <ul>
-                <li>Internship on AIML through APSSDC (May 2024 to June 2024) - <a href="https://www.linkedin.com/posts/vaishnavi-bonthu_i-am-pleased-to-share-my-experience-from-activity-7287701375558283264-yc69?utm_source=share&utm_medium=member_desktop" class="link" target="_blank">LinkedIn Post</a></li>
-                <li>Internship on MERN Stack Technologies through Biztron Softech (June 2024 to July 2024) - <a href="https://www.linkedin.com/posts/vaishnavi-bonthu_i-am-excited-to-share-my-internship-experience-activity-7287696193197854720-1hq3?utm_source=share&utm_medium=member_desktop" class="link" target="_blank">LinkedIn Post</a></li>
-                <li>Workshop on Python through Brainovision (1 week)</li>
+                <li>
+                    <strong>AWS Badge:</strong><br>
+                    <a href="https://www.credly.com/badges/ec988397-f97a-4b89-a3df-9eeca6b06fdc/public_url" target="_blank">View Badge</a>
+                </li>
+                <li>
+                    <strong>Web Development Fundamentals Badge:</strong><br>
+                    <a href="https://www.credly.com/badges/0a7f4bca-aca3-4630-a9c7-25fa16b93265/public_url" target="_blank">View Badge</a>
+                </li>
+                <li>
+                    <strong>Artificial Intelligence Fundamentals Badge:</strong><br>
+                    <a href="https://www.credly.com/badges/85d41ffc-b3c0-4113-96a6-ab7500f58ded/public_url" target="_blank">View Badge</a>
+                </li>
             </ul>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Bonthu Vaishnavi. All rights reserved.</p>
         </div>
-    </section>
+    </footer>
 
-    <section id="achievements">
-        <h2>Achievements</h2>
-        <div class="achievements">
-            <div class="badge">
-                <a href="https://www.credly.com/badges/ec988397-f97a-4b89-a3df-9eeca6b06fdc/public_url" class="link" target="_blank">
-                    AWS Cloud Quest-Cloud Practitioner Badge
-                </a>
-            </div>
-            <div class="badge">
-                <a href="https://www.credly.com/badges/0a7f4bca-aca3-4630-a9c7-25fa16b93265/public_url" class="link" target="_blank">
-                    Web Development Fundamentals Badge
-                </a>
-            </div>
-            <div class="badge">
-                <a href="https://www.credly.com/badges/85d41ffc-b3c0-4113-96a6-ab7500f58ded/public_url" class="link" target="_blank">
-                    Artificial Intelligence Fundamentals Badge
-                </a>
-            </div>
-        </div>
-    </section>
-</div>
+    <!-- Fun Element -->
+    <div class="fun-element" onclick="createConfetti()">
+        🎈
+    </div>
 
-<footer>
-    <p>&copy; 2025 Bonthu Vaishnavi</p>
-</footer>
-
-<script>
-window.alert("Hello! Welcome to my web page");
-</script>
-
+    <!-- Confetti Script -->
+    <script>
+        function createConfetti() {
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = `${Math.random() * 100}vw`;
+                confetti.style.animationDuration = `${Math.random() * 3 + 2}s`;
+                confetti.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+                document.body.appendChild(confetti);
+                setTimeout(() => confetti.remove(), 5000);
+            }
+        }
+    </script>
 </body>
 </html>
