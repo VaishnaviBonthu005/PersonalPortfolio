@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bonthu Vaishnavi Portfolio</title>
     <style>
+
         body {
             font-family: 'Comic Sans MS', cursive, sans-serif;
             line-height: 1.6;
@@ -30,6 +31,7 @@
             overflow: hidden;
         }
 
+ 
         header {
             background: rgba(255, 255, 255, 0.8);
             color: #333;
@@ -63,6 +65,7 @@
             100% { color: #ff6f61; }
         }
 
+        /* Navigation */
         nav {
             text-align: center;
             margin-top: 10px;
@@ -81,6 +84,7 @@
             transform: scale(1.2);
         }
 
+        /* Sections */
         section {
             padding: 40px 20px;
             margin: 20px 0;
@@ -139,6 +143,7 @@
             text-decoration: underline;
         }
 
+
         @keyframes fadeIn {
             from { opacity: 0; }
             to { opacity: 1; }
@@ -153,6 +158,7 @@
             from { transform: translateX(100%); opacity: 0; }
             to { transform: translateX(0); opacity: 1; }
         }
+
 
         footer {
             background: rgba(255, 255, 255, 0.8);
@@ -169,6 +175,7 @@
             font-size: 16px;
         }
 
+
         .fun-element {
             position: fixed;
             bottom: 20px;
@@ -183,7 +190,8 @@
             50% { transform: translateY(-20px); }
         }
 
-        .confetti {
+
+       .confetti {
             position: fixed;
             top: -10px;
             left: 50%;
@@ -191,35 +199,11 @@
             height: 10px;
             background: #ff6f61;
             animation: confetti-fall 5s linear infinite;
-        }
+        } 
 
         @keyframes confetti-fall {
             0% { transform: translateY(0) rotate(0deg); }
             100% { transform: translateY(100vh) rotate(360deg); }
-        }
-
-        .particle {
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            background-color: #ff6f61;
-            border-radius: 50%;
-            animation: particle-fall 5s linear infinite;
-        }
-
-        .particle:nth-child(2) {
-            left: 15%;
-            animation-duration: 4s;
-        }
-
-        .particle:nth-child(3) {
-            left: 70%;
-            animation-duration: 6s;
-        }
-
-        @keyframes particle-fall {
-            0% { transform: translateY(0); }
-            100% { transform: translateY(100vh); }
         }
 
         .fun-button {
@@ -255,28 +239,25 @@
     </header>
 
     <div class="container">
-        <!-- Personal Information -->
+
         <section id="personal-info">
             <h2>Personal Information</h2>
             <ul>
                 <li><strong>Name:</strong> Bonthu Vaishnavi</li>
                 <li><strong>Email:</strong> <a href="mailto:vaishuvaishnavibonthu@gmail.com">vaishuvaishnavibonthu@gmail.com</a></li>
                 <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/vaishnavi-bonthu" target="_blank">LinkedIn Profile</a></li>
-                <li><strong>GitHub:</strong> <a href="https://github.com/VaishnaviBonthu005" target="_blank">GitHub Profile</a></li>
             </ul>
         </section>
 
-        <!-- Summary -->
         <section id="summary">
             <h2>Summary</h2>
             <p>
-                Enthusiastic and highly motivated Computer Science Engineering student with a passion for programming and web development. 
-                Skilled in C, C++, Java, Python, and web development technologies. Strong understanding of data structures, algorithms, 
-                and problem-solving. Adept at collaborating in teams and adapting to new technologies quickly.
+                Motivated and detail-oriented third-year Computer Science Engineering student at LBRCE College with a CGPA of 8.6.
+                Proficient in programming languages such as Java, C++, and JavaScript, with a strong foundation in Data Structures & Algorithms.
+                Eager to learn and apply new technologies to solve real-world challenges, with a focus on continuous improvement and analytical problem-solving.
             </p>
         </section>
 
-        <!-- Education -->
         <section id="education">
             <h2>Education</h2>
             <ul>
@@ -289,27 +270,17 @@
             </ul>
         </section>
 
-        <!-- Skills -->
         <section id="skills">
             <h2>Skills</h2>
             <ul>
-                <li>Programming Languages: C, Python, Java, C++, JavaScript, PHP</li>
+                <li>Programming Languages:C, Python, Java, C++, JavaScript, PHP</li>
                 <li>Web Development: HTML, CSS, MySQL</li>
                 <li>Tools: Git, VS Code</li>
                 <li>Operating System: Windows, Ubuntu</li>
                 <li>Soft Skills: Problem-solving, Teamwork, Communication</li>
             </ul>
-
-            <h3>Technical Skills</h3>
-            <ul>
-                <li>Fundamentals of Java, C, and C++</li>
-                <li>OOP Concepts</li>
-                <li>SQL: DDL, DML, and DQL commands</li>
-                <li>HTML Tags</li>
-            </ul>
         </section>
 
-        <!-- Internships -->
         <section id="internships">
             <h2>Internships</h2>
             <ul>
@@ -322,7 +293,6 @@
             </ul>
         </section>
 
-        <!-- Achievements -->
         <section id="achievements">
             <h2>Achievements</h2>
             <ul>
@@ -332,7 +302,6 @@
             </ul>
         </section>
 
-        <!-- Projects -->
         <section id="projects">
             <h2>Projects</h2>
             <ul>
@@ -370,13 +339,11 @@
         </footer>
     </div>
 
-    <!-- Particles -->
-    <div class="particle" style="top: 0%; left: 10%;"></div>
-    <div class="particle" style="top: 10%; left: 50%;"></div>
-    <div class="particle" style="top: 20%; left: 80%;"></div>
-
     <div class="fun-element">
         🎉
     </div>
+
+    <div class="confetti"></div>
+<div class="confetti"></div>
 </body>
 </html>
