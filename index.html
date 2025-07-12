@@ -212,195 +212,742 @@
             background: #a6c1ee;
             transform: scale(1.1);
         }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            margin: 40px 0;
+            animation: fadeIn 1s ease-in;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            animation: none;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 111, 97, 0.2);
+            border-radius: 50%;
+            color: #ff6f61;
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background: #ff6f61;
+            color: white;
+            transform: translateY(-5px);
+        }
+        
+        /* Project Cards */
+        .project-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .project-card h3 {
+            color: #ff6f61;
+            margin-bottom: 15px;
+        }
+        
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .project-tag {
+            background: rgba(166, 193, 238, 0.3);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .project-links a {
+            padding: 8px 15px;
+            background: #ff6f61;
+            color: white;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .project-links a:hover {
+            background: #a6c1ee;
+            transform: translateY(-3px);
+        }
+        
+        /* Skills Section */
+        .skill-category {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .skill-category h3 {
+            color: #ff6f61;
+            margin-bottom: 15px;
+        }
+        
+        .skill-item {
+            margin-bottom: 15px;
+        }
+        
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+        }
+        
+        .skill-bar {
+            height: 10px;
+            background: rgba(255, 111, 97, 0.2);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: #ff6f61;
+            border-radius: 5px;
+        }
+        
+        /* Education Timeline */
+        .education-item {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            border-left: 5px solid #ff6f61;
+        }
+        
+        .education-item h3 {
+            color: #ff6f61;
+            margin-bottom: 5px;
+        }
+        
+        .education-item .date {
+            display: inline-block;
+            padding: 3px 10px;
+            background: rgba(255, 111, 97, 0.2);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        
+        /* Experience Items */
+        .experience-item {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            position: relative;
+            border-left: 5px solid #a6c1ee;
+        }
+        
+        .experience-item h3 {
+            color: #a6c1ee;
+            margin-bottom: 5px;
+        }
+        
+        .experience-item .date {
+            display: inline-block;
+            padding: 3px 10px;
+            background: rgba(166, 193, 238, 0.2);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+        
+        /* Achievements */
+        .achievement-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .achievement-card h3 {
+            color: #f6d365;
+            margin-bottom: 10px;
+        }
+        
+        /* Contact Section */
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        
+        .contact-button {
+            display: flex;
+            align-items: center;
+            padding: 15px 20px;
+            background: #ff6f61;
+            color: white;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .contact-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .contact-button i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+        
+        .contact-button.linkedin {
+            background: #0A66C2;
+        }
+        
+        .contact-button.github {
+            background: #333;
+        }
+        
+        .contact-button.resume {
+            background: #f6d365;
+            color: #333;
+        }
+        
+        .resume-buttons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .resume-button {
+            flex: 1;
+            text-align: center;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .resume-button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .resume-button h4 {
+            color: #ff6f61;
+            margin-bottom: 10px;
+        }
+        
+        .resume-button a {
+            display: inline-block;
+            padding: 8px 20px;
+            background: #ff6f61;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        
+        .resume-button a:hover {
+            background: #a6c1ee;
+        }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="container">
             <h1>Bonthu Vaishnavi</h1>
             <nav>
-                <a href="#personal-info">Personal Info</a>
-                <a href="#summary">Summary</a>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
                 <a href="#education">Education</a>
+                <a href="#experience">Experience</a>
                 <a href="#skills">Skills</a>
-                <a href="#internships">Internships</a>
-                <a href="#achievements">Achievements</a>
                 <a href="#projects">Projects</a>
-                <a href="#resume">Resume</a>
+                <a href="#achievements">Achievements</a>
+                <a href="#contact">Contact</a>
             </nav>
         </div>
     </header>
 
     <div class="container">
-        <section id="personal-info">
-            <h2>Personal Information</h2>
-            <ul>
-                <li><strong>Name:</strong> Bonthu Vaishnavi</li>
-                <li><strong>Email:</strong> <a href="mailto:vaishuvaishnavibonthu@gmail.com">vaishuvaishnavibonthu@gmail.com</a></li>
-                <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/vaishnavi-bonthu" target="_blank">LinkedIn Profile</a></li>
-            </ul>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <h1>Hi, I'm <span style="color: #ff6f61;">Bonthu Vaishnavi</span></h1>
+            <p>A passionate Computer Science Engineer with expertise in full-stack development and machine learning. I love turning ideas into reality through code.</p>
+            <div class="resume-buttons">
+                <div class="resume-button">
+                    <h4>Professional Documents</h4>
+                    <a href="resume.pdf" download="Bonthu_Vaishnavi_Resume.pdf">Download Resume</a>
+                    <a href="cv.pdf" download="Bonthu_Vaishnavi_CV.pdf" style="margin-top: 10px;">Download Curriculum Vitae</a>
+                </div>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/vaishnavi-bonthu" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://github.com/VaishnaviBonthu005" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:vaishuvaishnavibonthu@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
         </section>
 
-        <section id="summary">
-            <h2>Summary</h2>
-            <p>
-                Motivated and detail-oriented third-year Computer Science Engineering student at LBRCE College with a CGPA of 8.6.
-                Proficient in programming languages such as Java, C++, and JavaScript, with a strong foundation in Data Structures & Algorithms.
-                Eager to learn and apply new technologies to solve real-world challenges, with a focus on continuous improvement and analytical problem-solving.
-            </p>
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Computer Science Engineer & Developer</h3>
+                    <p>Motivated and detail-oriented third-year Computer Science Engineering student at LBRCE College with a CGPA of 8.6. Proficient in programming languages such as Java, C++, and JavaScript, with a strong foundation in Data Structures & Algorithms.</p>
+                    <p>Eager to learn and apply new technologies to solve real-world challenges, with a focus on continuous improvement and analytical problem-solving.</p>
+                    
+                    <div class="info-item">
+                        <strong>Name:</strong> Bonthu Vaishnavi
+                    </div>
+                    <div class="info-item">
+                        <strong>Email:</strong> vaishuvaishnavibonthu@gmail.com
+                    </div>
+                    <div class="info-item">
+                        <strong>Education:</strong> B.Tech in Computer Science Engineering
+                    </div>
+                    <div class="info-item">
+                        <strong>College:</strong> Lakireddy Bali Reddy College of Engineering
+                    </div>
+                </div>
+            </div>
         </section>
 
+        <!-- Education Section -->
         <section id="education">
-            <h2>Education</h2>
-            <ul>
-                <li>
-                    <strong>2023-Present:</strong> B.Tech in Computer Science Engineering at LBRCE College - CGPA: 8.6
-                </li>
-                <li>
-                    <strong>2020-2023:</strong> Diploma in Computer Science Engineering at KIET Women's College - 87%
-                </li>
-            </ul>
+            <h2>My Education</h2>
+            <div class="education-container">
+                <div class="education-item">
+                    <h3>B.Tech in Computer Science Engineering</h3>
+                    <h4>Lakireddy Bali Reddy College of Engineering</h4>
+                    <span class="date">2023 - Present</span>
+                    <p>Current CGPA: 8.6</p>
+                    <p>Specializing in full-stack development. Active participant in coding competitions.</p>
+                </div>
+                
+                <div class="education-item">
+                    <h3>Diploma in Computer Science Engineering</h3>
+                    <h4>Kakinada Institue of Engineering and Technology for Women</h4>
+                    <span class="date">2020 - 2023</span>
+                    <p>Graduated with 85%</p>
+                    <p>Developed strong foundation in programming and computer science fundamentals.</p>
+                </div>
+            </div>
         </section>
 
+        <!-- Experience Section -->
+        <section id="experience">
+            <h2>My Experience</h2>
+            <div class="experience-container">
+                <div class="experience-item">
+                    <h3>Internship at Miracle Software Systems</h3>
+                    <h4>Miracle Software Systems (I) Pvt. Ltd.</h4>
+                    <span class="date">19 May 2025 – 1 July 2025</span>
+                    <p>During the internship, I had the opportunity to work on real-time projects and enhance my skills in:</p>
+                    <ul>
+                        <li>Python programming</li>
+                        <li>FastAPI framework</li>
+                        <li>SQL database management</li>
+                        <li>Google Cloud Platform (GCP)</li>
+                    </ul>
+                    <p>This internship helped me gain practical experience, improve my problem-solving abilities, and build confidence in backend and cloud technologies.</p>
+                    <a href="https://www.linkedin.com/posts/vaishnavi-bonthu_internship-python-fastapi-activity-7349773621256433664-1isj?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD7DfB8BwDtfucFjbCqG86a2eSwqAurNVWE" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> View Certificate
+                    </a>
+                </div>
+                
+                <div class="experience-item">
+                    <h3>Artificial Intelligence Intern</h3>
+                    <h4>APSSDC</h4>
+                    <span class="date">2023</span>
+                    <p>I am pleased to share my experience from the APSSDC (Andhra Pradesh State Skill Development Corporation) AIML Internship. During this internship, I had the opportunity to explore the fundamentals of Artificial Intelligence and Machine Learning, where I gained a solid understanding of key concepts like supervised and unsupervised learning, data preprocessing, and model evaluation techniques.</p>
+                    <p>I worked on various projects, including implementing ML models, understanding algorithms, and using libraries such as scikit-learn and TensorFlow. This internship helped me strengthen my analytical and problem-solving skills, while also enhancing my ability to apply machine learning techniques to real-world datasets.</p>
+                    <a href="https://www.linkedin.com/posts/vaishnavi-bonthu_i-am-pleased-to-share-my-experience-from-activity-7287701375558283264-yc69?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD7DfB8BwDtfucFjbCqG86a2eSwqAurNVWE" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> View Certificate
+                    </a>
+                </div>
+                
+                <div class="experience-item">
+                    <h3>MERN Stack Developer Intern</h3>
+                    <h4>Biztron Softech</h4>
+                    <span class="date">2023</span>
+                    <p>I am excited to share my internship experience with Biztron Softech where I had the opportunity to work on MERN Stack Technologies. During this internship, I gained hands-on experience in developing full-stack web applications, utilizing MongoDB, Express.js, React.js, and Node.js.</p>
+                    <p>This experience has enhanced my skills in front-end and back-end development, deepened my understanding of modern web technologies, and strengthened my problem-solving abilities. I'm grateful for the mentorship provided by the team at Biztron Softech, and I look forward to applying the knowledge gained to future projects. This internship was a crucial step in my journey towards becoming a proficient full-stack developer.</p>
+                    <a href="https://www.linkedin.com/posts/vaishnavi-bonthu_i-am-excited-to-share-my-internship-experience-activity-7287696193197854720-1hq3?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD7DfB8BwDtfucFjbCqG86a2eSwqAurNVWE" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> View Certificate
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
         <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>Programming Languages: C, Python, Java, C++, JavaScript, PHP</li>
-                <li>Web Development: HTML, CSS, MySQL</li>
-                <li>Tools: Git, VS Code</li>
-                <li>Operating System: Windows, Ubuntu</li>
-                <li>Soft Skills: Problem-solving, Teamwork, Communication</li>
-            </ul>
+            <h2>My Skills</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3><i class="fas fa-code"></i> Programming Languages</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Python</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>C</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Java</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>C++</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-globe"></i> Web Development</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>HTML/CSS</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>JavaScript</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>PHP</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>MySQL</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category">
+                    <h3><i class="fas fa-tools"></i> Tools & Technologies</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>GitHub</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>VS Code</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Windows</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Ubuntu</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="internships">
-            <h2>Internships</h2>
-            <ul>
-                <li><strong>Internship at APSSDC:</strong> Focused on Artificial Intelligence and Machine Learning. Worked on supervised and unsupervised learning, data preprocessing, and model evaluation techniques using scikit-learn and TensorFlow.<br>
-                  <a href="https://www.linkedin.com/posts/vaishnavi-bonthu_i-am-pleased-to-share-my-experience-from-activity-7287701375558283264-yc69?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD7DfB8BwDtfucFjbCqG86a2eSwqAurNVWE">LinkedIn Post</a>
-                </li>
-                <li><strong>Internship at Biztron Softech:</strong> Gained hands-on experience in MERN stack technologies (MongoDB, Express.js, React.js, Node.js) to develop full-stack web applications.<br>
-                  <a href="https://www.linkedin.com/posts/vaishnavi-bonthu_i-am-excited-to-share-my-internship-experience-activity-7287696193197854720-1hq3?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD7DfB8BwDtfucFjbCqG86a2eSwqAurNVWE">LinkedIn Post</a>
-                </li>
-            </ul>
-        </section>
-
-        <section id="achievements">
-            <h2>Achievements</h2>
-            <ul>
-                <li><a href="https://www.credly.com/badges/ec988397-f97a-4b89-a3df-9eeca6b06fdc/public_url">AWS Badge</a></li>
-                <li><a href="https://www.credly.com/badges/0a7f4bca-aca3-4630-a9c7-25fa16b93265/public_url">Web Development Fundamentals Badge</a></li>
-                <li><a href="https://www.credly.com/badges/85d41ffc-b3c0-4113-96a6-ab7500f58ded/public_url">AI Fundamentals Badge</a></li>
-            </ul>
-        </section>
-
+        <!-- Projects Section -->
         <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li>
-                    <strong>Mini Compiler - Lexical Analysis Phase</strong><br>
-                    A simple mini compiler developed in C focusing on the lexical analysis phase, which processes source code to identify and generate tokens like keywords, identifiers, operators, and constants.
-                    <br><br>
-                    <strong>Key Features:</strong>
-                    <ul>
-                        <li>Tokenization of source code</li>
-                        <li>Identification of keywords, identifiers, operators, and constants</li>
-                        <li>Handling of whitespace, comments, and invalid tokens</li>
-                        <li>Generation of a symbol table for storing identifiers</li>
-                    </ul>
-                    <strong>Technologies:</strong> C, File Handling, Regular Expressions (for token matching)<br>
-                    <a href="https://github.com/VaishnaviBonthu005/MiniCompiler" target="_blank">GitHub Repository</a>
-                </li>
-<br>
-                <li>
-                    <strong>Currency Converter</strong><br>
-                    A currency converter application developed in Java with a graphical user interface (GUI) using the AWT framework. It converts currencies based on fixed exchange rates.
-                    <br><br>
-                    <strong>Key Features:</strong>
-                    <ul>
-                        <li>Currency conversion between multiple currencies</li>
-                        <li>Interactive GUI with AWT</li>
-                        <li>Handles user input for amount and currency selection</li>
-                    </ul>
-                    <strong>Technologies:</strong> Java, AWT, Currency Conversion<br>
-                    <a href="https://github.com/VaishnaviBonthu005/CurrencyConverter" target="_blank">GitHub Repository</a>
-                </li>
-<br>
-                <li>
-                    <strong>Client Requirement Management System</strong><br>
-                    A web-based application developed using PHP, MySQL, HTML, CSS, and JavaScript to manage client project details, requirements, and updates.
-                    <br><br>
-                    <strong>Key Features:</strong>
-                    <ul>
-                        <li>User Authentication & Role-Based Access</li>
-                        <li>Client Management</li>
-                        <li>Project Requirement Management</li>
-                        <li>Task Assignment & Tracking</li>
-                        <li>Updations</li>
-                        <li>Admin Dashboard</li>
-                        <li>Database Management (MySQL)</li>
-                    </ul>
-                    <strong>Technologies:</strong> PHP, MySQL, HTML, CSS, JavaScript<br>
-                    <a href="https://github.com/VaishnaviBonthu005/Client-Requirement-Management-System" target="_blank">GitHub Repository</a>
-                </li>
-<br>
-                <li>
-                    <strong>Fake News Detection</strong><br>
-                    A machine learning project to detect fake news using the LIAR dataset. The project involves text preprocessing, feature extraction using TF-IDF, and classification using Naive Bayes.
-                    <br><br>
-                    <strong>Key Features:</strong>
-                    <ul>
-                        <li>Text preprocessing (cleaning, stopword removal, etc.)</li>
-                        <li>TF-IDF for feature extraction</li>
-                        <li>Naive Bayes for classification</li>
-                        <li>Model evaluation (accuracy, confusion matrix, classification report)</li>
-                    </ul>
-                    <strong>Technologies:</strong> Python, Scikit-learn, NLTK, Pandas, Matplotlib<br>
-                    <a href="https://github.com/VaishnaviBonthu005/Fake-News-Detection" target="_blank">GitHub Repository</a>
-                </li>
-                <br>
-                <li>
-    <strong>Job Portal Web Application</strong><br>
-    A full-stack web application that connects job seekers with employers, allowing users to create profiles, search for jobs, and apply, while employers can post job openings and manage applications.
-    <br><br>
-    <strong>Key Features:</strong>
-    <ul>
-        <li>User authentication (job seekers and employers)</li>
-        <li>Job posting and application system</li>
-        <li>Resume upload and profile management</li>
-        <li>Search and filtering functionality</li>
-        <li>Admin dashboard for managing users/jobs</li>
-    </ul>
-    <strong>Technologies:</strong> PHP, MySQL, HTML/CSS, JavaScript<br>
-    <a href="https://github.com/VaishnaviBonthu005/JobPortal" target="_blank">GitHub Repository</a>
-</li>
-                <br>
-                <li>
-    <strong>Student Information Management System</strong><br>
-    A Python application with MySQL backend for managing comprehensive student records including personal details, academic information, and administrative data.
-    <br><br>
-    <strong>Key Features:</strong>
-    <ul>
-        <li>CRUD operations for student records</li>
-        <li>Custom exception handling for data validation</li>
-        <li>Database schema for student/course management</li>
-        <li>JSON integration for address storage</li>
-        <li>Admin/student role differentiation</li>
-    </ul>
-    <strong>Technologies:</strong> Python, MySQL, pymysql, JSON<br>
-    <a href="https://github.com/VaishnaviBonthu005/StudentInfoManager" target="_blank">GitHub Repository</a>
-</li>
-            </ul>
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Mini Compiler - Lexical Analysis Phase</h3>
+                    <p>A simple mini compiler developed in C focusing on the lexical analysis phase, which processes source code to identify and generate tokens.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">C</span>
+                        <span class="project-tag">Compiler Design</span>
+                        <span class="project-tag">Lexical Analysis</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/VaishnaviBonthu005/MiniCompiler" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Currency Converter</h3>
+                    <p>A currency converter application developed in Java with a graphical user interface (GUI) using the AWT framework.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Java</span>
+                        <span class="project-tag">AWT</span>
+                        <span class="project-tag">GUI</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/VaishnaviBonthu005/CurrencyConverter" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>Job Portal</h3>
+                    <p>The Job Portal is a web application for job seekers to apply for jobs and employers to post openings using PHP and MySQL.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">PHP</span>
+                        <span class="project-tag">MySQL</span>
+                        <span class="project-tag">Web Development</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/VaishnaviBonthu005/JobPortal" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+
+                
+                <div class="project-card">
+                    <h3>Client Requirement Management System</h3>
+                    <p>A web-based application to manage client project details, requirements, and updates.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">PHP</span>
+                        <span class="project-tag">MySQL</span>
+                        <span class="project-tag">Web Development</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/VaishnaviBonthu005/Client-Requirement-Management-System" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Fake News Detection</h3>
+                    <p>A machine learning project to detect fake news using the LIAR dataset with text preprocessing and Naive Bayes classification.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Machine Learning</span>
+                        <span class="project-tag">NLP</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/VaishnaviBonthu005/Fake-News-Detection" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <h3>Student Information Manager</h3>
+                    <p>A Python application with MySQL database integration for managing student records. Features include registration, updating details, viewing records, and deletion with proper error handling and validation.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">MySQL</span>
+                        <span class="project-tag">Database</span>
+                        <span class="project-tag">OOP</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/VaishnaviBonthu005/StudentInfoManager" target="_blank"><i class="fab fa-github"></i> View Code</a>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="resume">
-            <h2>Resume</h2>
-            <h3>Detailed Resume</h3>
-            <p>Download my comprehensive resume:</p>
-            <a href="Word-Resume.pdf" download="Bonthu_Vaishnavi_Detailed_Resume.pdf">Download Resume</a>
-            <h3>Short Resume</h3>
-            <p>Download my concise resume:</p>
-            <a href="Template-Resume.pdf" download="Bonthu_Vaishnavi_Concise_Resume.pdf">Download Resume</a>
+        <!-- Achievements Section -->
+        <section id="achievements">
+            <h2>My Achievements</h2>
+            <div class="achievements-container">
+                <div class="achievement-card">
+                    <h3>AWS Certified Cloud Practitioner</h3>
+                    <p>Earned the AWS Cloud Practitioner certification demonstrating foundational knowledge of AWS Cloud concepts, services, and terminology.</p>
+                    <a href="https://www.credly.com/badges/f473664e-a0be-492d-9faa-5010b3ecd44e/public_url" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> View Badge
+                    </a>
+                </div>
+                
+                <div class="achievement-card">
+                    <h3>Salesforce Certified AI Associate</h3>
+                    <p>Issued on October 26, 2024, this certification validates my foundational understanding of Artificial Intelligence concepts and their real-world applications, including AI fundamentals, machine learning basics, ethics in AI, and real-time use cases.</p>
+                    <a href="https://www.linkedin.com/posts/vaishnavi-bonthu_ai-artificialintelligence-certification-activity-7316387934302007297-lBlm?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD7DfB8BwDtfucFjbCqG86a2eSwqAurNVWE" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> View Certificate
+                    </a>
+                </div>
+                
+                <div class="achievement-card">
+                    <h3>Salesforce Certified Agentforce Specialist</h3>
+                    <p>This certification has strengthened my understanding of Salesforce tools and customer service workflows, and enhanced my ability to deliver intelligent and efficient support experiences.</p>
+                    <a href="https://www.linkedin.com/posts/vaishnavi-bonthu_salesforce-trailhead-certification-activity-7319808737395798017-sHlM?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD7DfB8BwDtfucFjbCqG86a2eSwqAurNVWE" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> View Certificate
+                    </a>
+                </div>
+                
+                <div class="achievement-card">
+                    <h3>Top Performer in Hackathon</h3>
+                    <p>Recognized as a top performer in the hackathon conducted by KIET College on the Edyst platform, showcasing problem-solving skills in Python programming.</p>
+                    <a href="https://www.linkedin.com/posts/vaishnavi-bonthu_hackathon-pythonprogramming-problemsolving-activity-7327158388973289472-Uszx?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD7DfB8BwDtfucFjbCqG86a2eSwqAurNVWE" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> View Certificate
+                    </a>
+                </div>
+                
+                <div class="achievement-card">
+                    <h3>AWS Fundamentals Certification</h3>
+                    <p>Earned the AWS Fundamentals certification demonstrating cloud computing knowledge.</p>
+                    <a href="https://www.credly.com/badges/ec988397-f97a-4b89-a3df-9eeca6b06fdc/public_url" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> View Badge
+                    </a>
+                </div>
+                
+                <div class="achievement-card">
+                    <h3>Web Development Fundamentals</h3>
+                    <p>Certified in Web Development Fundamentals covering HTML, CSS, and JavaScript.</p>
+                    <a href="https://www.credly.com/badges/0a7f4bca-aca3-4630-a9c7-25fa16b93265/public_url" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> View Badge
+                    </a>
+                </div>
+                
+                <div class="achievement-card">
+                    <h3>AI Fundamentals</h3>
+                    <p>Completed AI Fundamentals certification covering machine learning basics.</p>
+                    <a href="https://www.credly.com/badges/85d41ffc-b3c0-4113-96a6-ab7500f58ded/public_url" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> View Badge
+                    </a>
+                </div>
+                
+                <div class="achievement-card">
+                    <h3>AWS Educate Introduction to Cloud 101</h3>
+                    <p>Fundamental understanding of AWS cloud core services and understand the technical roles required for cloud success.</p>
+                    <a href="https://www.credly.com/badges/f6a97a06-11bd-49d4-8aee-a0bc991a4bfe/public_url" target="_blank">
+                        <i class="fas fa-external-link-alt"></i> View Badge
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <h2>Let's Connect</h2>
+            <p>I'd love to hear from you! Whether you have a project in mind or just want to say hello.</p>
+            
+            <div class="contact-methods">
+                <!-- Email Button -->
+                <a href="mailto:vaishuvaishnavibonthu@gmail.com" class="contact-button">
+                    <i class="fas fa-envelope"></i>
+                    <span>Send me an Email</span>
+                </a>
+                
+                <!-- LinkedIn Button -->
+                <a href="https://www.linkedin.com/in/vaishnavi-bonthu" target="_blank" class="contact-button linkedin">
+                    <i class="fab fa-linkedin-in"></i>
+                    <span>Connect on LinkedIn</span>
+                </a>
+                
+                <!-- GitHub Button -->
+                <a href="https://github.com/VaishnaviBonthu005" target="_blank" class="contact-button github">
+                    <i class="fab fa-github"></i>
+                    <span>View my GitHub</span>
+                </a>
+                
+                <!-- Resume Buttons -->
+                <div class="resume-buttons">
+                    <div class="resume-button">
+                        <h4>Resume</h4>
+                        <a href="resume.pdf" download="Bonthu_Vaishnavi_Resume.pdf">Download</a>
+                    </div>
+                    <div class="resume-button">
+                        <h4>Curriculum Vitae</h4>
+                        <a href="cv.pdf" download="Bonthu_Vaishnavi_CV.pdf">Download</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 20px;">
+                <p>Or reach out through any of these platforms:</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/vaishnavi-bonthu" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/VaishnaviBonthu005" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="mailto:vaishuvaishnavibonthu@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
         </section>
 
         <footer>
